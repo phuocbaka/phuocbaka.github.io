@@ -1,0 +1,1124 @@
+
+
+body {
+  background: #333;
+}
+
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+.inter{
+	width: 1728px;
+	z-index: 1;
+	padding-top: 2%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+    margin: 0 auto;
+    top: 10px;			
+}
+.inter .imess img{
+
+
+}
+.logo img{
+
+}
+.open {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 2rem;
+  position: relative;
+  text-decoration: none;
+  transition: 0.5s;
+  z-index: 25;
+ }
+
+.overlay {
+  position: fixed;
+  width: 0;
+  top: 0;
+  background-color: #333;
+  opacity: 0.7;
+  overflow-x: hidden;
+  height: 100%;
+  transition: 0.5s;
+  right: 0;
+  z-index: 20;
+
+}
+
+.overlay.is-active {
+	width: 100%;
+}
+
+.overlay-content {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  padding-top: 50px;
+  margin-top: 30px;
+}
+
+.overlay-content a {
+  font-size: 2rem;
+  color: #fff;
+  display: block;
+  padding: 10px;
+  margin-bottom: 4px;
+  text-decoration: none;
+  transition: 0.3s;
+  position: relative;
+}
+.overlay-content a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #fff;
+  transition: 0.3s;
+  display: block;
+}
+.overlay-content a:hover {
+  color: #1fd6ff;
+}
+
+.overlay-content a:hover:after {
+  width: 25%;
+}
+
+
+
+.ham {
+  cursor: pointer;
+  color: #000000;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.hamRotate.active .line {
+	stroke: #ffffff;
+}
+.line {
+  fill:none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke:#000;
+  stroke-width:3;
+  stroke-linecap:round;
+}
+.open:hover .line{
+	stroke: #1fd6ff;
+
+}
+.ham4 .top {
+  stroke-dasharray: 40 121;
+}
+.ham4 .bottom {
+  stroke-dasharray: 40 121;
+}
+.ham4.active .top {
+  stroke-dashoffset: -68px;
+}
+.ham4.active .bottom {
+  stroke-dashoffset: -68px;
+
+}
+
+p.txt1 {
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+    left: 43%;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 10px;
+    line-height: 1.5;
+}
+
+p.txt {
+    position: absolute;
+    z-index: 2;
+    top: 31%;
+    left: 37%;
+}
+
+/* sroll down*/
+.mouse_scroll {
+  display: block;
+  margin: 0 auto;
+  width: 24px;
+  height: 100px;
+  margin-bottom: 15%;
+
+}
+
+
+.m_scroll_arrows
+{
+  display: block;
+  width: 5px;
+  height: 5px;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+   
+  border-right: 2px solid #3e3e3e;
+  border-bottom: 2px solid #3e3e3e;
+  margin: 0 0 3px 4px;
+  
+  width: 16px;
+  height: 16px;
+}
+
+
+.unu
+{
+  margin-top: 1px;
+}
+
+.unu, .doi, .trei
+{
+    -webkit-animation: mouse-scroll 1s infinite;
+    -moz-animation: mouse-scroll 1s infinite;
+    animation: mouse-scroll 1s infinite;
+  
+}
+
+.unu
+{
+  -webkit-animation-delay: .1s;
+  -moz-animation-delay: .1s;
+  -webkit-animation-direction: alternate;
+  
+  animation-direction: alternate;
+  animation-delay: alternate;
+}
+
+.doi
+{
+  -webkit-animation-delay: .2s;
+  -moz-animation-delay: .2s;
+  -webkit-animation-direction: alternate;
+  
+  animation-delay: .2s;
+  animation-direction: alternate;
+  
+  margin-top: -6px;
+}
+
+.trei
+{
+  -webkit-animation-delay: .3s;
+  -moz-animation-delay: .3s;
+  -webkit-animation-direction: alternate;
+  
+  animation-delay: .3s;
+  animation-direction: alternate;
+  
+  
+  margin-top: -6px;
+}
+
+.mouse {
+  height: 42px;
+  width: 24px;
+  border-radius: 14px;
+  transform: none;
+  border: 2px solid #3e3e3e;
+  top: 170px;
+}
+
+.wheel {
+  height: 5px;
+  width: 2px;
+  display: block;
+  margin: 5px auto;
+  background: #3e3e3e;
+  position: relative;
+  
+  height: 4px;
+  width: 4px;
+  border: 2px solid #3e3e3e;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+}
+
+.wheel {
+  -webkit-animation: mouse-wheel 0.6s linear infinite;
+  -moz-animation: mouse-wheel 0.6s linear infinite;
+  animation: mouse-wheel 0.6s linear infinite;
+}
+
+@-webkit-keyframes mouse-wheel{
+   0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(6px);
+    -ms-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+@-moz-keyframes mouse-wheel {
+  0% { top: 1px; }
+  25% { top: 2px; }
+  50% { top: 3px;}
+  75% { top: 2px;}
+  100% { top: 1px;}
+}
+@-o-keyframes mouse-wheel {
+
+   0% { top: 1px; }
+  25% { top: 2px; }
+  50% { top: 3px;}
+  75% { top: 2px;}
+  100% { top: 1px;}
+}
+@keyframes mouse-wheel {
+
+   0% { top: 1px; }
+  25% { top: 2px; }
+  50% { top: 3px;}
+  75% { top: 2px;}
+  100% { top: 1px;}
+}
+
+@-webkit-keyframes mouse-scroll {
+
+  0%   { opacity: 0;}
+  50%  { opacity: .5;}
+  100% { opacity: 1;}
+}
+@-moz-keyframes mouse-scroll {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+@-o-keyframes mouse-scroll {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+@keyframes mouse-scroll {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+
+/*noi dung */
+.noidung{
+
+  width: 500px;
+  color: #000;
+  margin: 0 auto;
+  text-align: center;
+  padding-bottom: 190px;
+
+}
+
+
+.noidung h1 {
+    font-size: 47px;
+    font-family: monospace;
+    margin-bottom: 70px;
+    font-weight: 100px;
+}
+.noidung h3 {
+    font-size: 30px;
+    font-family: monospace;
+    margin-bottom: 70px;
+
+}
+.noidung p {
+    font-size: 14px;
+    font-family: monospace;
+    line-height: 40px;
+}
+
+.noidung1{
+  width: 1100px;
+  margin: 0 auto;
+}
+
+
+.noidung1-tren{
+  width: 100%;
+  display: flex;
+  margin-bottom: 45px;
+}
+
+.noidung1-duoi  {
+writing-mode: vertical-rl;
+text-orientation: upright;
+text-align: center;
+
+}
+
+.noidung1-duoi p {
+color: #fff;
+background-color: #000;
+letter-spacing: 10px;
+line-height: 30px;
+margin-inline-start: 25px;
+
+}
+.noidung2-duoi p {
+color: #fff;
+background-color: #000;
+letter-spacing: 10px;
+line-height: 30px;
+margin-inline-start: 25px;
+
+}
+
+
+
+.noidung2-duoi{
+  width: 1100px;
+  margin: 0 auto;
+  writing-mode: vertical-rl;
+text-orientation: upright;
+text-align: center;
+}
+.noidung2 {
+
+}
+.noidung2-all{
+    width: 1480px;
+    float: right;
+	margin-bottom: 5%;
+	margin-top: 15%;
+}
+.noidung2-all h3{
+ font-size: 50px;
+}
+.noidung2-bg{
+
+}
+
+.noidung2-video img:nth-child(1) {
+    margin-right: 42px;
+}
+
+.noidung2-all:after{
+  content: "";
+  background-color: #c5c5c5;
+  width: 1480px;
+  height: 10px;
+}
+
+
+.news-content{
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.news-content table {
+  margin: 0 auto;
+  border-collapse: collapse;
+  width: 800px;
+  font-size: 12px;
+  margin-top: 5%;
+}
+.news-content h3 {
+  
+  margin: 0 auto;
+  font-size: 50px;
+  text-align: center;
+  margin-top: 25%;
+}
+
+.news-content th, td {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+
+
+}
+tr:hover {background-color:#f5f5f5;}
+
+td:nth-child(odd) {
+  width: 138px;
+}
+.news-content p{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    width: 500px;
+}
+
+.book-content{
+	width: 1500px;
+	display: flex;
+	margin-top: 10%;
+
+}
+
+
+
+.book01 {
+    display: flex;
+    margin-top: 56px;
+}
+.book-phai{
+
+	width: 50%;
+}
+.book-phai img{
+	margin-left: 43px;
+    border: 1px solid;
+}
+.icon1{
+  width: 1100px;
+  margin: 0 auto;
+}
+
+.video{
+  width: 50%;
+  margin-top: 160px;
+  display: flex;
+}
+.video .img01{
+    margin-top: 71px;
+    margin-right: 30px;
+}
+.img02{
+position: relative;
+}
+.video .img02:before {
+    background: url(../images/n5.png) no-repeat;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 155px;
+    bottom: 0;
+    left: 85%;
+}
+
+
+.noidung-nho {
+    padding-left: 125px;
+    width: 50%;
+    position: relative;
+}
+
+.bg-text {
+    font-size: 100px;
+    color: #f3f3f3;
+    margin-right: 0px;
+    position: absolute;
+    z-index: 1;
+    margin-block-start: 2em;
+    margin-block-end: 0;
+}
+
+.icon {
+    float: right;
+}
+
+.arrow {
+  width: 150px;
+  height: 1px;
+  background-color: #000;
+  float:right;
+  position: relative;
+  text-align: center;
+}
+.arrow p {
+    margin-block-start: -1.5em;
+    margin-block-end: 0;
+}
+
+.arrow::after {
+  content: '';
+  position: absolute;
+  width: 15%;
+  height: 1px;
+  top: -8px;
+  right: -3px;
+  background-color: #000;
+  transform: rotate(45deg);
+}
+.arrow:hover { 
+  animation: arrow 700ms linear infinite;
+  animation: slide1 1s ease-in-out infinite;
+}
+
+
+
+@keyframes slide1 {
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+
+  50% {
+    transform: translate(10px, 0);
+  }
+}
+
+.main1 {
+  font-family:Arial;
+  width:500px;
+  display:block;
+  margin:0 auto;
+}
+.main1 h3 {
+    background: #fff;
+    color: #3498db;
+    font-size: 36px;
+    line-height: 100px;
+    margin: 10px;
+    padding: 2%;
+    position: relative;
+    text-align: center;
+}
+.action{
+  display:block;
+  margin:100px auto;
+  width:100%;
+  text-align:center;
+}
+.action a {
+  display:inline-block;
+  padding:5px 10px; 
+  background:#f30;
+  color:#fff;
+  text-decoration:none;
+}
+.action a:hover{
+  background:#000;
+}
+
+
+body {
+  background: #fff;
+  margin: 0;
+}
+
+.text {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  color: black;
+  font-size: 300px;
+  filter: url(#gooey);
+  z-index: 1;
+}
+ .bg img{
+ 	   margin: 45px auto;
+    transform: translate(5%);
+ }   
+ 
+.text::before, .text::after {
+  position: absolute;
+  opacity: 0;
+  transform: translate(-50%, -50%);
+  animation-duration: 39s;
+  animation-timing-function: ease;
+  animation-iteration-count: infinite;
+  filter: blur(9px);
+}
+.text::before {
+  content: "冬";
+  animation-name: items-odd;
+}
+.text::after {
+  content: "和";
+  animation-name: items-even;
+  animation-delay: 1.5s;
+}
+
+@keyframes items-odd {
+  2.5641025641% {
+    opacity: 1;
+  }
+  3.8461538462% {
+    opacity: 1;
+  }
+  6.4102564103% {
+    opacity: 0;
+  }
+  7.6923076923% {
+    opacity: 0;
+  }
+  10.2564102564% {
+    opacity: 1;
+  }
+  11.5384615385% {
+    opacity: 1;
+  }
+  14.1025641026% {
+    opacity: 0;
+  }
+  15.3846153846% {
+    opacity: 0;
+  }
+  17.9487179487% {
+    opacity: 1;
+  }
+  19.2307692308% {
+    opacity: 1;
+  }
+  21.7948717949% {
+    opacity: 0;
+  }
+  23.0769230769% {
+    opacity: 0;
+  }
+  25.641025641% {
+    opacity: 1;
+  }
+  26.9230769231% {
+    opacity: 1;
+  }
+  29.4871794872% {
+    opacity: 0;
+  }
+  30.7692307692% {
+    opacity: 0;
+  }
+  33.3333333333% {
+    opacity: 1;
+  }
+  34.6153846154% {
+    opacity: 1;
+  }
+  37.1794871795% {
+    opacity: 0;
+  }
+  38.4615384615% {
+    opacity: 0;
+  }
+  41.0256410256% {
+    opacity: 1;
+  }
+  42.3076923077% {
+    opacity: 1;
+  }
+  44.8717948718% {
+    opacity: 0;
+  }
+  46.1538461538% {
+    opacity: 0;
+  }
+  48.7179487179% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  52.5641025641% {
+    opacity: 0;
+  }
+  53.8461538462% {
+    opacity: 0;
+  }
+  56.4102564103% {
+    opacity: 1;
+  }
+  57.6923076923% {
+    opacity: 1;
+  }
+  60.2564102564% {
+    opacity: 0;
+  }
+  61.5384615385% {
+    opacity: 0;
+  }
+  64.1025641026% {
+    opacity: 1;
+  }
+  65.3846153846% {
+    opacity: 1;
+  }
+  67.9487179487% {
+    opacity: 0;
+  }
+  69.2307692308% {
+    opacity: 0;
+  }
+  71.7948717949% {
+    opacity: 1;
+  }
+  73.0769230769% {
+    opacity: 1;
+  }
+  75.641025641% {
+    opacity: 0;
+  }
+  76.9230769231% {
+    opacity: 0;
+  }
+  79.4871794872% {
+    opacity: 1;
+  }
+  80.7692307692% {
+    opacity: 1;
+  }
+  83.3333333333% {
+    opacity: 0;
+  }
+  84.6153846154% {
+    opacity: 0;
+  }
+  87.1794871795% {
+    opacity: 1;
+  }
+  88.4615384615% {
+    opacity: 1;
+  }
+  91.0256410256% {
+    opacity: 0;
+  }
+  92.3076923077% {
+    opacity: 0;
+  }
+  94.8717948718% {
+    opacity: 1;
+  }
+  96.1538461538% {
+    opacity: 1;
+  }
+  98.7179487179% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+  0% {
+    content: "あ";
+  }
+  7.6922076923% {
+    content: "あ";
+  }
+  7.6923076923% {
+    content: "う";
+  }
+  15.3845153846% {
+    content: "う";
+  }
+  15.3846153846% {
+    content: "お";
+  }
+  23.0768230769% {
+    content: "お";
+  }
+  23.0769230769% {
+    content: "キ";
+  }
+  30.7691307692% {
+    content: "キ";
+  }
+  30.7692307692% {
+    content: "ケ";
+  }
+  38.4614384615% {
+    content: "ケ";
+  }
+  38.4615384615% {
+    content: "日";
+  }
+  46.1537461538% {
+    content: "日";
+  }
+  46.1538461538% {
+    content: "語";
+  }
+  53.8460538462% {
+    content: "語";
+  }
+  53.8461538462% {
+    content: "人";
+  }
+  61.5383615385% {
+    content: "人";
+  }
+  61.5384615385% {
+    content: "姓";
+  }
+  69.2306692308% {
+    content: "姓";
+  }
+  69.2307692308% {
+    content: "父";
+  }
+  76.9229769231% {
+    content: "父";
+  }
+  76.9230769231% {
+    content: "母";
+  }
+  84.6152846154% {
+    content: "母";
+  }
+  84.6153846154% {
+    content: "大";
+  }
+  92.3075923077% {
+    content: "大";
+  }
+  92.3076923077% {
+    content: "冬";
+  }
+  99.9999% {
+    content: "冬";
+  }
+}
+@keyframes items-even {
+  2.5641025641% {
+    opacity: 1;
+  }
+  3.8461538462% {
+    opacity: 1;
+  }
+  6.4102564103% {
+    opacity: 0;
+  }
+  7.6923076923% {
+    opacity: 0;
+  }
+  10.2564102564% {
+    opacity: 1;
+  }
+  11.5384615385% {
+    opacity: 1;
+  }
+  14.1025641026% {
+    opacity: 0;
+  }
+  15.3846153846% {
+    opacity: 0;
+  }
+  17.9487179487% {
+    opacity: 1;
+  }
+  19.2307692308% {
+    opacity: 1;
+  }
+  21.7948717949% {
+    opacity: 0;
+  }
+  23.0769230769% {
+    opacity: 0;
+  }
+  25.641025641% {
+    opacity: 1;
+  }
+  26.9230769231% {
+    opacity: 1;
+  }
+  29.4871794872% {
+    opacity: 0;
+  }
+  30.7692307692% {
+    opacity: 0;
+  }
+  33.3333333333% {
+    opacity: 1;
+  }
+  34.6153846154% {
+    opacity: 1;
+  }
+  37.1794871795% {
+    opacity: 0;
+  }
+  38.4615384615% {
+    opacity: 0;
+  }
+  41.0256410256% {
+    opacity: 1;
+  }
+  42.3076923077% {
+    opacity: 1;
+  }
+  44.8717948718% {
+    opacity: 0;
+  }
+  46.1538461538% {
+    opacity: 0;
+  }
+  48.7179487179% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 1;
+  }
+  52.5641025641% {
+    opacity: 0;
+  }
+  53.8461538462% {
+    opacity: 0;
+  }
+  56.4102564103% {
+    opacity: 1;
+  }
+  57.6923076923% {
+    opacity: 1;
+  }
+  60.2564102564% {
+    opacity: 0;
+  }
+  61.5384615385% {
+    opacity: 0;
+  }
+  64.1025641026% {
+    opacity: 1;
+  }
+  65.3846153846% {
+    opacity: 1;
+  }
+  67.9487179487% {
+    opacity: 0;
+  }
+  69.2307692308% {
+    opacity: 0;
+  }
+  71.7948717949% {
+    opacity: 1;
+  }
+  73.0769230769% {
+    opacity: 1;
+  }
+  75.641025641% {
+    opacity: 0;
+  }
+  76.9230769231% {
+    opacity: 0;
+  }
+  79.4871794872% {
+    opacity: 1;
+  }
+  80.7692307692% {
+    opacity: 1;
+  }
+  83.3333333333% {
+    opacity: 0;
+  }
+  84.6153846154% {
+    opacity: 0;
+  }
+  87.1794871795% {
+    opacity: 1;
+  }
+  88.4615384615% {
+    opacity: 1;
+  }
+  91.0256410256% {
+    opacity: 0;
+  }
+  92.3076923077% {
+    opacity: 0;
+  }
+  94.8717948718% {
+    opacity: 1;
+  }
+  96.1538461538% {
+    opacity: 1;
+  }
+  98.7179487179% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+  0% {
+    content: "い";
+  }
+  7.6922076923% {
+    content: "い";
+  }
+  7.6923076923% {
+    content: "え";
+  }
+  15.3845153846% {
+    content: "え";
+  }
+  15.3846153846% {
+    content: "カ";
+  }
+  23.0768230769% {
+    content: "カ";
+  }
+  23.0769230769% {
+    content: "ク";
+  }
+  30.7691307692% {
+    content: "ク";
+  }
+  30.7692307692% {
+    content: "コ";
+  }
+  38.4614384615% {
+    content: "コ";
+  }
+  38.4615384615% {
+    content: "本";
+  }
+  46.1537461538% {
+    content: "本";
+  }
+  46.1538461538% {
+    content: "化";
+  }
+  53.8460538462% {
+    content: "化";
+  }
+  53.8461538462% {
+    content: "愛";
+  }
+  61.5383615385% {
+    content: "愛";
+  }
+  61.5384615385% {
+    content: "男";
+  }
+  69.2306692308% {
+    content: "男";
+  }
+  69.2307692308% {
+    content: "羽";
+  }
+  76.9229769231% {
+    content: "羽";
+  }
+  76.9230769231% {
+    content: "小";
+  }
+  84.6152846154% {
+    content: "小";
+  }
+  84.6153846154% {
+    content: "秋";
+  }
+  92.3075923077% {
+    content: "秋";
+  }
+  92.3076923077% {
+    content: "和";
+  }
+  99.9999% {
+    content: "和";
+  }
+}
+

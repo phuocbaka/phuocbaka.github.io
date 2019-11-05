@@ -1,0 +1,498 @@
+body {
+  background: #fff;
+  margin: 0;
+}
+
+
+*, *:before, *:after {
+  -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box;
+ }
+
+.inter{
+	width: 1728px;
+	z-index: 1;
+	padding-top: 2%;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+  margin: 0 auto;
+  top: 10px;			
+}
+.inter .imess img{
+
+
+}
+.logo img{
+
+}
+.open {
+  display: inline-block;
+  cursor: pointer;
+  font-size: 2rem;
+  position: relative;
+  text-decoration: none;
+  transition: 0.5s;
+  z-index: 25;
+ }
+
+.overlay {
+  position: fixed;
+  width: 0;
+  top: 0;
+  background-color: #333;
+  opacity: 0.7;
+  overflow-x: hidden;
+  height: 100%;
+  transition: 0.5s;
+  right: 0;
+  z-index: 20;
+
+}
+
+.overlay.is-active {
+	width: 100%;
+}
+
+.overlay-content {
+  text-align: center;
+  position: relative;
+  width: 100%;
+  padding-top: 50px;
+  margin-top: 30px;
+}
+
+.overlay-content a {
+  font-size: 2rem;
+  color: #fff;
+  display: block;
+  padding: 10px;
+  margin-bottom: 4px;
+  text-decoration: none;
+  transition: 0.3s;
+  position: relative;
+}
+.overlay-content a:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0%;
+  transform: translateX(-50%);
+  height: 3px;
+  background: #fff;
+  transition: 0.3s;
+  display: block;
+}
+.overlay-content a:hover {
+  color: #1fd6ff;
+}
+
+.overlay-content a:hover:after {
+  width: 25%;
+}
+
+
+
+.ham {
+  cursor: pointer;
+  color: #000000;
+  -webkit-tap-highlight-color: transparent;
+  transition: transform 400ms;
+  -moz-user-select: none;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+.hamRotate.active {
+  transform: rotate(45deg);
+}
+.hamRotate.active .line {
+	stroke: #ffffff;
+}
+.line {
+  fill:none;
+  transition: stroke-dasharray 400ms, stroke-dashoffset 400ms;
+  stroke:#000;
+  stroke-width:3;
+  stroke-linecap:round;
+}
+.open:hover .line{
+	stroke: #1fd6ff;
+
+}
+.ham4 .top {
+  stroke-dasharray: 40 121;
+}
+.ham4 .bottom {
+  stroke-dasharray: 40 121;
+}
+.ham4.active .top {
+  stroke-dashoffset: -68px;
+}
+.ham4.active .bottom {
+  stroke-dashoffset: -68px;
+
+}
+
+p.txt1 {
+    position: absolute;
+    top: 40%;
+    z-index: 1;
+    left: 43%;
+    font-size: 30px;
+    text-align: center;
+    font-weight: 500;
+    letter-spacing: 10px;
+    line-height: 1.5;
+}
+
+p.txt {
+    position: absolute;
+    z-index: 2;
+    top: 31%;
+    left: 37%;
+}
+
+/* sroll down*/
+.mouse_scroll {
+  display: block;
+  margin: 0 auto;
+  width: 24px;
+  height: 100px;
+  margin-bottom: 15%;
+
+}
+
+
+.m_scroll_arrows
+{
+  display: block;
+  width: 5px;
+  height: 5px;
+  -ms-transform: rotate(45deg); /* IE 9 */
+  -webkit-transform: rotate(45deg); /* Chrome, Safari, Opera */
+  transform: rotate(45deg);
+   
+  border-right: 2px solid #3e3e3e;
+  border-bottom: 2px solid #3e3e3e;
+  margin: 0 0 3px 4px;
+  
+  width: 16px;
+  height: 16px;
+}
+
+
+.unu
+{
+  margin-top: 1px;
+}
+
+.unu, .doi, .trei
+{
+    -webkit-animation: mouse-scroll 1s infinite;
+    -moz-animation: mouse-scroll 1s infinite;
+    animation: mouse-scroll 1s infinite;
+  
+}
+
+.unu
+{
+  -webkit-animation-delay: .1s;
+  -moz-animation-delay: .1s;
+  -webkit-animation-direction: alternate;
+  
+  animation-direction: alternate;
+  animation-delay: alternate;
+}
+
+.doi
+{
+  -webkit-animation-delay: .2s;
+  -moz-animation-delay: .2s;
+  -webkit-animation-direction: alternate;
+  
+  animation-delay: .2s;
+  animation-direction: alternate;
+  
+  margin-top: -6px;
+}
+
+.trei
+{
+  -webkit-animation-delay: .3s;
+  -moz-animation-delay: .3s;
+  -webkit-animation-direction: alternate;
+  
+  animation-delay: .3s;
+  animation-direction: alternate;
+  
+  
+  margin-top: -6px;
+}
+
+.mouse {
+  height: 42px;
+  width: 24px;
+  border-radius: 14px;
+  transform: none;
+  border: 2px solid #3e3e3e;
+  top: 170px;
+}
+
+.wheel {
+  height: 5px;
+  width: 2px;
+  display: block;
+  margin: 5px auto;
+  background: #3e3e3e;
+  position: relative;
+  
+  height: 4px;
+  width: 4px;
+  border: 2px solid #3e3e3e;
+  -webkit-border-radius: 8px;
+          border-radius: 8px;
+}
+
+.wheel {
+  -webkit-animation: mouse-wheel 0.6s linear infinite;
+  -moz-animation: mouse-wheel 0.6s linear infinite;
+  animation: mouse-wheel 0.6s linear infinite;
+}
+
+@-webkit-keyframes mouse-wheel{
+   0% {
+    opacity: 1;
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+  }
+
+  100% {
+    opacity: 0;
+    -webkit-transform: translateY(6px);
+    -ms-transform: translateY(6px);
+    transform: translateY(6px);
+  }
+}
+@-moz-keyframes mouse-wheel {
+  0% { top: 1px; }
+  25% { top: 2px; }
+  50% { top: 3px;}
+  75% { top: 2px;}
+  100% { top: 1px;}
+}
+@-o-keyframes mouse-wheel {
+
+   0% { top: 1px; }
+  25% { top: 2px; }
+  50% { top: 3px;}
+  75% { top: 2px;}
+  100% { top: 1px;}
+}
+@keyframes mouse-wheel {
+
+   0% { top: 1px; }
+  25% { top: 2px; }
+  50% { top: 3px;}
+  75% { top: 2px;}
+  100% { top: 1px;}
+}
+
+@-webkit-keyframes mouse-scroll {
+
+  0%   { opacity: 0;}
+  50%  { opacity: .5;}
+  100% { opacity: 1;}
+}
+@-moz-keyframes mouse-scroll {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+@-o-keyframes mouse-scroll {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+@keyframes mouse-scroll {
+
+  0%   { opacity: 0; }
+  50%  { opacity: .5; }
+  100% { opacity: 1; }
+}
+
+.all {
+    margin: 0 auto;
+    width: 1600px;
+    display: flex;
+    margin-top: 100px;
+}
+
+.column1 {
+    margin-right: 30px;
+    width: 230%;
+    height: auto;
+}
+
+.about-video video{
+  border: 3px solid black;
+/*  -webkit-filter: grayscale(100%);  Safari 6.0 - 9.0 
+  filter: grayscale(100%);*/
+
+}
+.about-video video:hover{
+
+    transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1.000);
+}
+
+.column2 {
+    width: 100%;
+}
+
+.column2-01 {
+  display: flex;
+
+  padding-bottom: 5px;
+  margin-top: 5px;  
+}
+
+.all-column {
+    overflow-y: scroll;
+    height: 500px;
+}
+.all-column::-webkit-scrollbar-track
+{
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+  border-radius: 10px;
+  background-color: #F5F5F5;
+  display: none;
+}
+
+.all-column::-webkit-scrollbar
+{
+  width: 10px;
+  background-color: #F5F5F5;
+  display: none;
+}
+
+.all-column::-webkit-scrollbar-thumb
+{
+  border-radius: 5px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+  background-color: #D62929;
+  display: none;
+}
+
+.video-tl {
+display: flex;
+    margin-top: 20px;
+    border-bottom: 1px solid #c7c7c759;
+    padding-bottom: 18px;
+}
+
+.video-title {
+    flex-grow: 2;
+}
+
+.video-icon {
+    display: flex;
+}
+
+.video-title h1 {
+    margin-block-start: 0;
+    margin-block-end: 0;
+}
+
+.video-like img , .video-unlike img {
+   vertical-align:super;
+    width: 30%;
+}
+.video-share img {
+   vertical-align:super;
+    width: 21%;
+}
+.thumnail {
+  margin-right: 10px;
+}
+
+.thumnail img {
+    border-radius: 5px;
+}
+
+.up-next {
+margin-bottom: 30px;
+
+}
+
+.up-next span {
+    margin-top: 0px;
+}
+
+.abc {
+border-bottom: 1px solid #eaeaea;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+}
+.col-right {
+  float: right;
+  display: flex;
+  margin-top: -7px;
+}
+
+.text-upload {
+    margin-right: 10px;
+     position: relative; 
+     top: -11px; 
+}
+
+.flatRoundedCheckbox
+{
+    width: 40px;
+    height: 16px;
+    position: relative;
+
+}
+.flatRoundedCheckbox div
+{
+    width: 100%;
+    height:100%;
+    background: #d3d3d3;
+    border-radius: 50px;
+    position: relative;
+    top:-30px;
+}
+
+.flatRoundedCheckbox label{
+display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50px;
+    -webkit-transition: all .5s ease;
+    -moz-transition: all .5s ease;
+    -o-transition: all .5s ease;
+    -ms-transition: all .5s ease;
+    transition: all .5s ease;
+    cursor: pointer;
+    position: absolute;
+    top: -12px;
+    z-index: 1;
+    left: 1px;
+    background: #505050;
+
+}
+
+.flatRoundedCheckbox input[type=checkbox]:checked ~ div
+{
+    background: #61ceff;
+}
+ 
+.flatRoundedCheckbox input[type=checkbox]:checked ~ label {
+    left: 20px;
+}
+
+input[type=checkbox] {
+    visibility: hidden;
+}
